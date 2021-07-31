@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+	// Write your code here
+    int n,sum=0,num;
+    cin >> n;
+    while(n!=0)
+    {
+        num = n % 10;
+        sum = sum*10 + num;
+        n = n/10;
+    }
+    cout << sum;
+	
+}
