@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+
+  // Write your code here  
+    int n,x,y;
+    cin >> n;
+    for(int i=1;i<=n;i++)
+    {
+        x=i;
+        y=2;
+        for(int k=1;k<=n-i;k++)
+        {
+            cout << " ";
+        }
+        for(int j=1;j<=i;j++)
+        {
+            cout << x-j+1;
+        }
+        for(int j=1;j<=i-1;j++)
+        {
+            cout << y;
+            y++;
+        }
+        cout << endl;
+    }
+
+  
+}
+
