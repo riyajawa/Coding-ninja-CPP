@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+#include <climits>
+
+
+int main(){
+    
+    // Write your code here
+    int n;
+    cin >> n;
+    int large = INT_MIN,sec=INT_MIN;
+    int x;
+    while(n--){
+        cin >> x;
+        if(x>large)
+        {
+            int temp = large;
+            large = x;
+            sec = temp;
+        }
+        else if(x>sec && x!=large)
+        {
+            sec = x;
+        }
+    }
+    cout << sec;
+    
+}
