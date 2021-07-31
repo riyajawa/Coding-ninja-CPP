@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+	// Write your code here
+    int n;
+    cin >> n;
+   if(n==1 || n==2)
+   {
+       cout << "true";
+   }
+    else {
+        int a,b;
+        bool over = true,trend;
+        cin >> a >> b;
+        if(a==b)
+        {
+            cout << "false";
+        }
+        else {
+            trend = a>b;
+            for(int i=3;i<=n;i++)
+            {
+                a=b;
+                cin >> b;
+                if(a==b){
+                    over = false;
+                    break;
+                }
+                else if(a>b!=trend && trend==0){
+                    over = false;
+                    break;
+                }
+                trend = a>b;
+            }
+            if(over)
+                cout << "true";
+            else 
+                cout << "false";
+        }
+    }
+	
+}
