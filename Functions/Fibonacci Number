@@ -1,0 +1,28 @@
+bool checkMember(int n){
+
+  /* Don't write main().
+   * Don't read input, it is passed as function argument.
+   * Return output and don't print it.
+   * Taking input and printing output is handled automatically.
+  */
+   int a=1;
+    int b=1;
+    int c,num;
+    num = n;
+    for(int i=2;i<=n;i++)
+    {
+        c=a+b;
+        
+        if(c==num)
+        {
+            return 1;
+            break;
+        }
+       
+    
+       a=b;
+        b=c;
+        
+    }
+ return 0;
+}
