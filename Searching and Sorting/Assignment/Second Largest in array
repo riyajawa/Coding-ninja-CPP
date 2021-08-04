@@ -1,0 +1,34 @@
+int findSecondLargest(int *input, int n)
+{
+    //Write your code here
+    int max,c=0;
+    int z= -2147483648;
+    if(n<=1)
+    {
+        return z;
+    }
+    max=input[0];
+    int seclarge = input[0];
+    for(int i=0;i<n;i++)
+    {
+        if(max < input[i])
+        {
+            seclarge = max;
+            max = input[i];
+        }
+        else if(input[i]<max && input[i]>seclarge)
+        {
+            seclarge = input[i];
+        }
+        else 
+        {
+            c++;
+        }
+        if(c==n-1)
+        {
+            return z;
+        }
+        
+    }
+    return seclarge;
+}
