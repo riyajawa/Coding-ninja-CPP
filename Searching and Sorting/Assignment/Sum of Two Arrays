@@ -1,0 +1,39 @@
+void sumOfTwoArrays(int *arr1, int n, int *arr2, int m, int *res)
+{
+    //Write your code here
+    int carry=0;
+    int  i=n-1;
+    int j=m-1;
+    int s=0;
+    int k=max(n,m);
+    while(i>=0 && j>=0)
+    {
+        s=arr1[i] + arr2[j] + carry;
+        carry = s/10;
+        res[k]=s%10;
+        k--;
+        i--;
+        j--;
+    }
+    while(i>=0)
+    {
+        s=arr1[i]+carry;
+        carry = s/10;
+        res[k] = s%10;
+        k--;
+        i--;
+    }
+    while(j>=0)
+    {
+        s=arr2[j]+ carry;
+        carry = s/10;
+        res[k]= s%10;
+        k--;
+        j--;
+    }
+    if(carry)
+    {
+        res[k]= carry;
+    }
+    
+}
