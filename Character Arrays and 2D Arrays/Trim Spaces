@@ -1,0 +1,21 @@
+void trimSpaces(char str []) {
+    // Write your code here
+  int i=0,j=0;
+    int n= strlen(str);
+    while(j<n)
+    {
+        if(str[i]!=' ')
+        {
+            int temp = str[i];
+            str[i] = str[j];
+            str[j]= temp;
+            i++;
+            j++;
+        }
+        else if(str[i]== ' ')
+        {
+            i++;
+        }
+    }
+    str[j] ='\0';
+}
