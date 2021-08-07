@@ -1,0 +1,18 @@
+void printSubstrings(char str[]) {
+    // Write your code here
+    int n = strlen(str);
+    int k=0;
+    while(k<=n)
+    {
+    for(int i=k;i<n;i++)
+    {
+        for(int j=k;j<=i;j++)
+        {
+            cout << str[j];
+        }
+        cout<< endl;
+    }
+    k++;
+    }
+    
+}
