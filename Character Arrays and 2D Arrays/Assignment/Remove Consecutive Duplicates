@@ -1,0 +1,19 @@
+oid removeConsecutiveDuplicates(char input[]) {
+   
+    int i=0,j=0,c=0;
+    while(input[i])
+    {
+        if(input[i+1]== input[i])
+        {
+            c++;
+        }
+        else 
+        {
+            input[j] = input[i];
+            j++;
+        }
+        i++;
+    }
+    input[j] = '\0';
+    
+}
