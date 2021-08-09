@@ -1,0 +1,28 @@
+ string getCompressedString(string &input) {
+    
+   
+  int c=0,i=0,j=0;
+     while(input[i])
+     {
+         if(input[i+1]==input[i])
+         {
+             c++;
+         }
+         else
+         {
+             input[j] = input[i];
+             j++;
+             if(c)
+             {
+                 input[j] = c+1+'0';
+                 j++;
+             }
+             c=0;
+         }
+         i++;
+     }
+     string r = input.substr(0,j);
+     return r;
+
+     
+}
