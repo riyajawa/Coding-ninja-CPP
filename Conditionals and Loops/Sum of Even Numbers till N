@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+
+
+int main(){
+
+       	/*  
+		Read input as specified in the question.
+		Print output as specified in the question.
+	*/
+    int a,sum=0;
+    
+    cin >> a;
+    for(int i=1;i<=a;i++)
+    {
+        if(i%2==0)
+        {
+            sum=sum+i;
+        }
+    }
+    cout<<sum;
+    
+  
+}
