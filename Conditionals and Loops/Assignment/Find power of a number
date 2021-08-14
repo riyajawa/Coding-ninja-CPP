@@ -1,0 +1,12 @@
+#include<cmath>
+#include<iostream>
+using namespace std;
+
+int main() {
+	// Write your code here
+    int x,a;
+    cin >> x >> a;
+    int res = pow(x,a);
+    cout << res << endl;
+	
+}
