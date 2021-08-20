@@ -1,0 +1,13 @@
+int reverse(int input)
+{
+//Write your code here
+    
+    int sum=0;
+    while(input!=0)
+    {
+        int x = input%10;
+        sum = sum*10 + x;
+        input = input/10;
+    }
+    return sum;
+}
