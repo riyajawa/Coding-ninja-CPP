@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+void fun(char str[],int start)
+{
+    if(str[start]=='\0' || str[start+1]=='\0')
+    {
+        return;
+    }
+    fun(str,start+1);
+    int n = strlen(str);
+    if(str[start] == str[start+1])
+    {
+        for(int i=n-1;i>start;i--)
+        {
+            str[i+1] = str[i];
+        }
+        str[start+1]='*';
+    }
+    str[n+1]='\0';
+}
+
+void pairStar(char input[]) {
+    // Write your code here
+    fun(input,0);
+}
