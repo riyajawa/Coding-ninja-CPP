@@ -1,0 +1,27 @@
+int fun(int* input,int n,int sum,int i,int sum1)
+{
+    if(i>=n)
+    {
+        if(sum == sum1)
+            return 1;
+        else 
+            return 0;
+    } 
+   int first  = fun(input,n,sum,i+1,sum1);
+   int pos = fun(input,n,sum,i+1,sum1+input[i]);
+    int neg = fun(input,n,sum ,i+1,sum1-input[i]);
+    int res = first + pos + neg;
+    return res;
+}
+int number(int* input,int n,int sum)
+{
+	//Write your code here
+    int res = fun(input , n, sum, 0, 0);
+    if(sum==0)
+    {
+        return res-1;
+    }
+    else {
+        return res;
+    }
+}
