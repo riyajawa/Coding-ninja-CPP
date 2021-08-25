@@ -1,0 +1,55 @@
+    int s1=m-s+1;
+    int s2=e-m;
+    
+    int a1[s1],a2[s2];
+    for(int i=0;i<s1;i++){
+        a1[i]=a[s+i];
+    }
+    for(int j=0;j<s2;j++){
+        a2[j]=a[m+j+1];
+    }
+    //merge two sort array
+    int i=0,j=0,k=s;
+    while(i<s1 && j<s2)
+    {
+        if(a1[i]<a2[j])
+        {
+            a[k]=a1[i];
+            k++;
+            i++;
+        }void merge(int a[],int s,int m,int e){
+
+        else{
+            a[k]=a2[j];
+            k++;
+            j++;
+        }
+    }
+    
+    while(i<s1){
+        a[k]=a1[i];
+        k++;i++;
+    }
+    while(j<s2){
+        a[k]=a2[j];
+        k++;
+        j++;
+    }
+    
+}
+void sort(int a[],int s,int e){
+    
+    if(s>=e)
+        return;
+    
+    int m=(s+e)/2;
+    sort(a,s,m);
+    sort(a,m+1,e);
+    
+    merge(a,s,m,e);
+}
+
+void mergeSort(int a[], int n){
+	// Write your code here
+        sort(a,0,n-1);
+}
